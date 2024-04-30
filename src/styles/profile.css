@@ -1,0 +1,17 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  margin: 10px solid violet;
+  width: 200px;
+}
+
+.profile-hearbar {
+  /* display: flex;
+  justify-content: space-around;
+  color: black;
+  background-color: aqua;
+  margin: 10px solid violet;
+  width: 300px; */
+}

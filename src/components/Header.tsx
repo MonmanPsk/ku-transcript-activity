@@ -2,8 +2,8 @@ type Props = {}
 
 export default function Header({}: Props) {
   return (
-    <div>
-        
+    <div className="header">
+      <h2>Transcript กิจกรรม</h2>
     </div>
   )
 }
