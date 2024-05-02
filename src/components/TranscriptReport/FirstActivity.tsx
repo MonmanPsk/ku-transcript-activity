@@ -1,8 +1,10 @@
-import { FirstActivityProps } from "../../types/FirstActivity.types"
+import { ActivityProps } from "../../types/TranscriptReport.types"
 
-export default function FirstActivity({}: FirstActivityProps) {
+export default function FirstActivity({}: ActivityProps) {
 
   return (
-    <div>First Activities</div>
+    <div>
+      First Activity
+    </div>
   )
 }

@@ -1,7 +1,9 @@
-type Props = {}
+import { ActivityProps } from "../../types/TranscriptReport.types"
 
-export default function SecondActivity({}: Props) {
+export default function SecondActivity({}: ActivityProps) {
   return (
-    <div>SecondActivity</div>
+    <div>
+      Second Activity
+    </div>
   )
 }

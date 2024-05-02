@@ -1,4 +1,4 @@
-export type Activity = {
+export type ActivityProps = {
   activityId: string
   activityName?: string
   organization?: string
