@@ -3,8 +3,9 @@
     flex-direction: column;
     justify-content: space-evenly;
     text-align: left;
-    height: 130px;
-    width: 90%;
+    height: 110px;
+    width: 85%;
+    padding: 10px;
     background: linear-gradient(to left, rgba(146, 163, 253, 0.5), rgba(157, 206, 255, 0.5));
     border-radius: 22px;
     font-size: 20px;
@@ -12,7 +13,7 @@
 }
 
 .downloader-title {
-    margin-left: 20px;
+    margin-left: 10px;
     color: #1D1617;
 }
 
@@ -28,13 +29,12 @@
     background-color: #fff;
     border-radius: 12px;
     height: 50px;
-    width: 120px;
+    width: 40%;
     font-size: 16px;
 }
 
 .downloader-icon {
     height: 24px;
-    fill: #1575E5;
 }
 
 .transcript-text {

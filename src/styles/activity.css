@@ -1,0 +1,80 @@
+.activity-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(280.04deg, rgba(146, 163, 253, 0.2) -4.74%, rgba(157, 206, 255, 0.2) 164.93%);
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.activity-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 15px;
+    color: #7B6F72;
+}
+
+.activity-header-title {
+    font-weight: 500;
+    font-size: 20px;
+    color: #1D1617;
+}
+
+.activity-tags-container {
+    display: flex;
+}
+
+.activity-tag {
+    border-radius: 5px;
+    background-color: #FFFBEB;
+    color: #F6A723;
+    padding: 2px 5px;
+    margin-right: 5px;
+}
+
+.activity-hours-tag {
+    border-radius: 5px;
+    background-color: #EFF6FF;
+    color: #2563EB;
+    padding: 2px 5px;
+}
+
+.activity-progress {
+    font-weight: 400;
+    font-size: 15px;
+    text-align: right;
+    color: #1D1617;
+}
+
+.activity-progress-bottombar {
+    height: 10px;
+    width: 100%;
+    background-color: #F7F8F8;
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.activity-progress-frontbar {
+    height: 10px;
+    width: 80%;
+    background-color: #34B53A;
+}
+
+.activity-lists {
+    display: flex;
+    flex-direction: column;
+}
+
+.activity-details-button {
+    background-color: #006B67;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 16px;
+    height: 35px;
+    width: 94px;
+    appearance: none;
+    font-weight: 500;
+}

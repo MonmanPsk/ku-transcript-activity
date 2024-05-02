@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-self: stretch;
-    flex-shrink: 0;
+    width: 85%;
+    padding: 10px;
 }
 
 .page1-transcript-report-header {
