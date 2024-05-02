@@ -9,7 +9,7 @@ import "../../styles/transcriptReport.css"
 export default function TranscriptReport() {
   return (
     <div className="transcript-report-container">
-      <div>รายงาน Transcript กิจกรรม</div>
+      <span className="page1-transcript-report-header">รายงาน Transcript กิจกรรม</span>
       <FirstActivity />
       <SecondActivity />
       <ThirdActivity />

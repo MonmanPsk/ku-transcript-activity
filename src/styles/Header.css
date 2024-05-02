@@ -4,6 +4,7 @@
   align-self: stretch;
   align-items: center;
   flex-shrink: 0;
+  margin: 20px 0px 0px 20px;
 }
 .page1-title-home {
   gap: 5px;
@@ -11,13 +12,14 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.page1-text {
+.page1-text-header {
   color: var(--dl-color-default-blackcolor);
   height: auto;
   font-size: 32px;
   font-style: Bold;
   text-align: left;
   font-weight: 700;
+  font-family: DB Ozone X;
   line-height: 30px;
   font-stretch: normal;
   text-decoration: none;
