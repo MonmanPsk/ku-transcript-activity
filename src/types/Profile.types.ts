@@ -9,5 +9,5 @@ export type ProfileProps = {
   passStatus: boolean //pass criteria or not
   totalHours: number
   totalActivity: number
-  img : string
+  // img : string
 }

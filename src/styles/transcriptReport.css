@@ -21,20 +21,20 @@
 }
 
 .page1-fullbody-card {
+    width: 100%;
     gap: 10px;
     display: flex;
-    padding: 20px;
-    align-self: stretch;
     background: linear-gradient(-73deg, rgba(146, 163, 253, 0.2) 0%, rgba(157, 206, 255, 0.2) 100%);
     align-items: flex-start;
     border-radius: 20px;
     flex-direction: column;
-    margin: 10px 37px;
+    margin: 10px 0px;
+    padding: 10px 0px 0px 15px;
 }
 
   .page1-workout-text {
     display: flex;
-    align-self: stretch;
+    margin: 10px 10px 0px 10px;
     align-items: flex-start;
     flex-direction: column;
   }
@@ -61,6 +61,7 @@
     flex-direction: column;
     justify-content: center;
     background-color: rgba(0, 107, 103, 1);
+    margin: 0px 0px 10px 10px;
   }
   .page1-button-text {
     color: rgba(255, 255, 255, 1);

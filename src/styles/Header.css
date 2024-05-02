@@ -4,7 +4,8 @@
   align-self: stretch;
   align-items: center;
   flex-shrink: 0;
-  margin: 20px 0px 0px 20px;
+  margin: 20px 0px 15px 20px;
+  justify-content: center;
 }
 .page1-title-home {
   gap: 5px;
