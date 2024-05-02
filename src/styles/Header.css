@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "DB Ozone X";   /*Can be any text*/
+  src: local("DB Ozone X v3.2"),
+    url("../fonts/DB\ Ozone\ X\ v3.2.ttf") format("truetype");
+}
+
+.page1-header {
+  gap: 138px;
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+}
+.page1-title-home {
+  gap: 5px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.page1-text {
+  color: var(--dl-color-default-blackcolor);
+  height: auto;
+  font-size: 32px;
+  font-style: Bold;
+  text-align: left;
+  font-family: "DB Ozone X";
+  font-weight: 700;
+  line-height: 30px;
+  font-stretch: normal;
+  text-decoration: none;
+}
