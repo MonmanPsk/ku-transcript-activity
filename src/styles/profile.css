@@ -1,17 +1,240 @@
-.profile-container {
+.page1-profile-section {
+  gap: 20px;
   display: flex;
-  justify-content: center;
+  padding: 10px;
+  align-self: stretch;
+  align-items: flex-start;
+  border-color: rgba(220, 223, 228, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 22px;
+  flex-direction: column;
+  margin: 20px 15px;
+}
+.page1-frame10204 {
+  gap: 50px;
+  display: flex;
+  align-self: stretch;
   align-items: center;
-  background-color: aqua;
-  margin: 10px solid violet;
-  width: 200px;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+.page1-frame10205 {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+.page1-latest-pic {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.page1-vector-bg {
+  top: 0px;
+  left: 0px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
 }
 
-.profile-hearbar {
-  /* display: flex;
+.page1-profile-pic {
+  top: 0px;
+  left: 0px;
+  width: 55px;
+  height: 55px;
+  opacity: 0.30;
+  position: absolute;
+  border-radius: 27px;
+}
+.page1-name {
+  width: 100px;
+  height: 44px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.page1-text002 {
+  color: var(--dl-color-default-blackcolor);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Medium;
+  text-align: left;
+  font-family: DB Ozone X;
+  font-weight: 500;
+  line-height: 21px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.page1-text004 {
+  top: 26px;
+  color: var(--dl-color-default-gray1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: DB Ozone X;
+  font-weight: 400;
+  line-height: 18px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.page1-pass-status {
+  gap: 10px;
+  display: flex;
+  padding: 5px 10px;
+  align-items: center;
+  border-radius: 8px;
+  flex-direction: column;
+  background-color: rgba(226, 251, 215, 1);
+}
+
+.page1-pass-text006 {
+  color: rgba(52, 181, 58, 1);
+  height: auto;
+  font-size: 20px;
+  font-style: Medium;
+  text-align: left;
+  font-family: DB Ozone X;
+  font-weight: 500;
+  line-height: 18px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.page1-not-pass-status {
+  gap: 10px;
+  display: flex;
+  padding: 5px 8px;
+  align-items: center;
+  border-radius: 8px;
+  flex-direction: column;
+  background-color: rgba(253, 242, 248, 1);
+}
+.page1-not-pass-text006 {
+  color: rgba(237, 79, 157, 1);
+  height: auto;
+  font-size: 20px;
+  font-style: Medium;
+  text-align: left;
+  font-family: DB Ozone X;
+  font-weight: 500;
+  line-height: 18px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.page1-frame10206 {
+  gap: 15px;
+  display: flex;
   justify-content: space-around;
-  color: black;
-  background-color: aqua;
-  margin: 10px solid violet;
-  width: 300px; */
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.page1-height-card {
+  gap: 5px;
+  display: flex;
+  padding: 12px 25px;
+  align-items: center;
+  border-radius: 16px;
+  flex-direction: column;
+  justify-content: center;
+}
+.page1-text008 {
+  color: rgba(29, 22, 23, 1);
+  height: auto;
+  font-size: 20px;
+  font-style: Medium;
+  text-align: left;
+  font-family: DB Ozone X;
+  font-weight: 500;
+  line-height: 21px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.page1-text010 {
+  color: var(--dl-color-default-gray1);
+  height: auto;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: DB Ozone X;
+  font-weight: 400;
+  line-height: 18px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.page1-height-card1 {
+  gap: 5px;
+  display: flex;
+  padding: 12px 25px;
+  align-items: center;
+  border-radius: 16px;
+  flex-direction: column;
+  justify-content: center;
+}
+.page1-text012 {
+  color: rgba(29, 22, 23, 1);
+  height: auto;
+  font-size: 20px;
+  font-style: Medium;
+  text-align: left;
+  font-family: DB Ozone X;
+  font-weight: 500;
+  line-height: 21px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.page1-text014 {
+  color: var(--dl-color-default-gray1);
+  height: auto;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: DB Ozone X;
+  font-weight: 400;
+  line-height: 18px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.page1-height-card2 {
+  gap: 5px;
+  display: flex;
+  padding: 12px 25px;
+  align-items: center;
+  border-radius: 16px;
+  flex-direction: column;
+  justify-content: center;
+}
+.page1-text016 {
+  color: rgba(29, 22, 23, 1);
+  height: auto;
+  font-size: 20px;
+  font-style: Medium;
+  text-align: left;
+  font-family: DB Ozone X;
+  font-weight: 500;
+  line-height: 21px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.page1-text018 {
+  color: var(--dl-color-default-gray1);
+  height: auto;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: DB Ozone X;
+  font-weight: 400;
+  line-height: 18px;
+  font-stretch: normal;
+  text-decoration: none;
 }

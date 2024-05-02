@@ -6,7 +6,7 @@ type name = {
 export type ProfileProps = {
   name: name
   email: string
-  passStatus: boolean
+  passStatus: boolean //pass criteria or not
   totalHours: number
   totalActivity: number
   img : string
