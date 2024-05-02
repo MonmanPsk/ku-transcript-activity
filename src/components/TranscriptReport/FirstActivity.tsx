@@ -1,6 +1,6 @@
-import { ActivityProps } from "../../types/TranscriptReport.types"
+// import { ActivityProps } from "../../types/TranscriptReport.types"
 
-export default function FirstActivity({}: ActivityProps) {
+export default function FirstActivity() {
 
   return (
     <div>

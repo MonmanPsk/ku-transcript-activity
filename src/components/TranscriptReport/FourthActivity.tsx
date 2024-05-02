@@ -1,6 +1,6 @@
-import { ActivityProps } from "../../types/TranscriptReport.types"
+// import { ActivityProps } from "../../types/TranscriptReport.types"
 
-export default function FourthActivity({}: ActivityProps) {
+export default function FourthActivity() {
     return (
         <div className="page1-fullbody-card">
             <div className="page1-workout-text">
