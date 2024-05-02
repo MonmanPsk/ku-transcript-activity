@@ -6,10 +6,11 @@
     height: 110px;
     width: 85%;
     padding: 10px;
-    background: linear-gradient(to left, rgba(146, 163, 253, 0.5), rgba(157, 206, 255, 0.5));
+    background: linear-gradient(282.61deg, rgba(146, 163, 253, 0.5) 2.72%, rgba(157, 206, 255, 0.5) 154.2%);
     border-radius: 22px;
     font-size: 20px;
     font-weight: 700;
+    margin-bottom: 30px;
 }
 
 .downloader-title {

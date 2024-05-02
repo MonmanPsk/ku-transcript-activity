@@ -1,27 +1,8 @@
-.page1-header {
-  gap: 138px;
-  display: flex;
-  align-self: stretch;
-  align-items: center;
-  flex-shrink: 0;
-  margin: 20px 0px 15px 20px;
-  justify-content: center;
-}
-.page1-title-home {
-  gap: 5px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.page1-text-header {
-  color: var(--dl-color-default-blackcolor);
-  height: auto;
+.header {
   font-size: 32px;
-  font-style: Bold;
-  text-align: left;
   font-weight: 700;
-  font-family: DB Ozone X;
-  line-height: 30px;
-  font-stretch: normal;
-  text-decoration: none;
+  color: #1D1617;
+  width: 85%;
+  display: flex;
+  margin: 45px 0px 15px -10px;
 }

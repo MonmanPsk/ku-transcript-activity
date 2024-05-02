@@ -1,15 +1,9 @@
 import "../styles/Header.css"
 
-type Props = {}
-
-export default function Header({}: Props) {
+export default function Header() {
   return (
-    <div className="page1-header">
-      <div className="page1-title-home">
-        <span className="page1-text-header">
-          <span>Transcript กิจกรรม</span>
-        </span>
-      </div>
+    <div className="header">
+      <p>Transcript กิจกรรม</p>
     </div>
   )
 }

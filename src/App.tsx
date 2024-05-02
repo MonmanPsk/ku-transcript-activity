@@ -16,14 +16,12 @@ function App() {
     })
   }, [])
 
-  console.log(userData)
-
   return (
     <>
       <Header />
       <Profile />
-      <Downloader />
       <TranscriptReport />
+      <Downloader />
     </>
   )
 }

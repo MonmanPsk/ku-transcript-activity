@@ -1,7 +1,25 @@
 import { ActivityProps } from "../../types/TranscriptReport.types"
-import '../../styles/activity.css'
 
 export default function FirstActivity({ }: ActivityProps) {
+  const test_arr = [
+    {
+      "activityName": "กิจกรรมหนึ่ง",
+      "hours": 4
+    },
+    {
+      "activityName": "กิจกรรมสอง",
+      "hours": 2
+    },
+    {
+      "activityName": "กิจกรรมสาม",
+      "hours": 3
+    },
+    {
+      "activityName": "กิจกรรมสี่",
+      "hours": 4
+    },
+  ]
+
   return (
     <div className="activity-container">
       <div className="activity-header">
@@ -23,9 +41,16 @@ export default function FirstActivity({ }: ActivityProps) {
         </div>
       </div>
       <div className="activity-lists">
-        { }
+        {
+          test_arr.map((activity, index) => (
+            <div className="activity" key={index}>
+              <p className="activity-name">{activity.activityName}</p>
+              <p>{activity.hours}</p>
+            </div>
+          ))
+        }
       </div>
       <button className="activity-details-button">ทั้งหมด</button>
     </div>
   )
-} 
+}

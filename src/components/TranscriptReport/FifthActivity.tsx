@@ -1,18 +1,12 @@
 import { ActivityProps } from "../../types/TranscriptReport.types"
 
-export default function FifthActivity({}: ActivityProps) {
+export default function FifthActivity({ }: ActivityProps) {
     return (
-        <div className="page1-fullbody-card">
-            <div className="page1-workout-text">
-            <span className="page1-text">
-                <span>ได้รับคัดเลือกให้เป็นนิิสิตดีเด่นตามประกาศของมหาวิทยาลัย</span>
-            </span>
+        <div className="activity-container">
+            <div className="activity-header">
+                <p className="activity-header-title">ได้รับคัดเลือกให้เป็นนิิสิตดีเด่นตามประกาศของมหาวิทยาลัย</p>
             </div>
-            <button className="page1-button-viewmore">
-            <span className="page1-button-text">
-                <span>ทั้งหมด</span>
-            </span>
-            </button>
+            <button className="activity-details-button">ทั้งหมด</button>
         </div>
     )
 }
