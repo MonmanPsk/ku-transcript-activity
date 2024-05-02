@@ -4,11 +4,12 @@
     justify-content: space-evenly;
     text-align: left;
     height: 130px;
-    width: 90%;
+    width: 85%;
     background: linear-gradient(to left, rgba(146, 163, 253, 0.5), rgba(157, 206, 255, 0.5));
     border-radius: 22px;
     font-size: 20px;
     font-weight: 700;
+    padding: 0px 15px;
 }
 
 .downloader-title {

@@ -1,15 +1,16 @@
 .page1-profile-section {
   gap: 20px;
   display: flex;
-  padding: 10px;
-  align-self: stretch;
+  padding: 10px 15px;
   align-items: flex-start;
   border-color: rgba(220, 223, 228, 1);
   border-style: solid;
   border-width: 1px;
   border-radius: 22px;
   flex-direction: column;
-  margin: 10px 15px;
+  justify-content: space-between;
+  width: 85%;
+  margin-bottom: 10px;
 }
 .page1-frame10204 {
   gap: 50px;
@@ -114,6 +115,7 @@
   gap: 10px;
   display: flex;
   padding: 5px 8px;
+  min-width: 110px;
   align-items: center;
   border-radius: 8px;
   flex-direction: column;
