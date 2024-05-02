@@ -1,7 +1,7 @@
 .page1-profile-section {
   gap: 20px;
   display: flex;
-  padding: 10px 15px;
+  padding: 10px;
   align-items: flex-start;
   border-color: rgba(220, 223, 228, 1);
   border-style: solid;
