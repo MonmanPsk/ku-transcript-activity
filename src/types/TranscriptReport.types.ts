@@ -16,5 +16,5 @@ export type StudentProps = {
   email: string
   faculty: string
   major: string
-  activities: ActivityProps[]
+  activities: ActivityProps[][]
 }

@@ -13,7 +13,7 @@
   margin-bottom: 25px;
 }
 .page1-frame10204 {
-  gap: 50px;
+  /* gap: 50px; */
   display: flex;
   align-self: stretch;
   align-items: center;
@@ -54,7 +54,7 @@
   border-radius: 27px;
 }
 .page1-name {
-  width: 100px;
+  min-width: 120px;
   height: 44px;
   display: flex;
   position: relative;

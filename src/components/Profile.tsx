@@ -1,7 +1,7 @@
-// import { ProfileProps } from "../types/Profile.types"
+import { ProfileProps } from "../types/Profile.types"
 import "../styles/profile.css"
 
-export default function Profile() {
+export default function Profile(props: ProfileProps) {
 
   const handleStatus = (b: boolean) => {
     if (b) { //pass the criteria
@@ -39,21 +39,21 @@ export default function Profile() {
           </div>
           <div className="page1-name">
             <span className="page1-text002">
-              <span>พชร พรมแพง</span> 
+              <span>{props.name.first} {props.name.last}</span> 
             </span>
             <span className="page1-text004">
-              <span>pachara.pro@ku.th</span>
+              <span>{props.email}</span>
             </span>
           </div>
         </div>
         <div>
-          {handleStatus(false)}
+          {handleStatus(props.passStatus)}
         </div>
       </div>
       <div className="page1-frame10206">
         <div className="page1-height-card">
           <span className="page1-text008">
-            <span>80</span>
+            <span>{props.totalHours}</span>
           </span>
           <span className="page1-text010">
             <span>ชั่วโมงกิจกรรม</span>
@@ -61,7 +61,7 @@ export default function Profile() {
         </div>
         <div className="page1-height-card1">
           <span className="page1-text012">
-            <span>13</span>
+            <span>{props.totalActivity}</span>
           </span>
           <span className="page1-text014">
             <span>โครงการ</span>
@@ -69,7 +69,7 @@ export default function Profile() {
         </div>
         <div className="page1-height-card2">
           <span className="page1-text016">
-            <span>13</span>
+            <span>{props.totalActivity}</span>
           </span>
           <span className="page1-text018">
             <span>กิจกรรม</span>
