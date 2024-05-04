@@ -1,6 +1,6 @@
-import { ActivityProps } from "../../types/TranscriptReport.types"
+import { ActivityProps } from "../../types/TranscriptReport.types";
 
-export default function SecondActivity({ }: ActivityProps) {
+export default function SecondActivity({}: ActivityProps) {
   return (
     <div className="activity-container">
       <div className="activity-header">
@@ -21,10 +21,8 @@ export default function SecondActivity({ }: ActivityProps) {
           <div className="activity-progress-frontbar"></div>
         </div>
       </div>
-      <div className="activity-lists">
-        { }
-      </div>
+      <div className="activity-lists">{}</div>
       <button className="activity-details-button">ทั้งหมด</button>
     </div>
-  )
+  );
 }

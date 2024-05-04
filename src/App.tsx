@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import fetchUser from "./api/user";
 import Header from "./components/Header";
-import Profile from "./components/Profile";
+import Profile from "./components/Profile/Profile";
 import Downloader from "./components/Downloader";
 import TranscriptReport from "./components/TranscriptReport/TranscriptReport";
 import "./styles/App.css";

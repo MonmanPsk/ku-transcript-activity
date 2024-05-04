@@ -1,10 +1,10 @@
 import FirstActivity from "./FirstActivity";
 import SecondActivity from "./SecondActivity";
-import ThirdActivity from "./ThirdActivity"
-import FourthActivity from "./FourthActivity"
-import FifthActivity from "./FifthActivity"
+import ThirdActivity from "./ThirdActivity";
+import FourthActivity from "./FourthActivity";
+import FifthActivity from "./FifthActivity";
 
-import "../../styles/transcriptReport.css"
+import "../../styles/transcriptReport.css";
 
 export default function TranscriptReport() {
   return (
@@ -16,5 +16,5 @@ export default function TranscriptReport() {
       <FourthActivity />
       <FifthActivity />
     </div>
-  )
+  );
 }
