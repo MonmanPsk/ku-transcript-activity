@@ -137,6 +137,7 @@
 
 .activity-name {
   font-weight: 400;
+  max-width: 94%;
 }
 
 .activity-lists-divider {
