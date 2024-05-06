@@ -80,6 +80,8 @@ function App() {
     totalActivity: getActivityAmount(),
   };
 
+  const activitiesData : ActivityProps[][] = userData?.activities as ActivityProps[][]
+
   return (
     <>
       <Header />
@@ -90,7 +92,7 @@ function App() {
         totalHours={profile.totalHours as number}
         totalActivity={profile.totalActivity as number}
       />
-      <TranscriptReport />
+      <TranscriptReport activities={activitiesData}/>
       <Downloader />
     </>
   );

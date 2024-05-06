@@ -1,25 +1,16 @@
 import { ActivityProps } from "../../types/TranscriptReport.types";
-import { Button, Tab} from "./Button";
+import { Button, Tab } from "./Button";
 
-export default function FifthActivity({}: ActivityProps) {
-  const test_arr = [
-    {
-      "activityId": "166222222222",
-      "outstanding": "ฟุตบอล"
-    },
-    {
-      "activityId": "166222222222",
-      "outstanding": "ฟุตบอล"
-    },
-    {
-      "activityId": "166222222222",
-      "outstanding": "ฟุตบอล"
-    },
-    {
-      "activityId": "166222222222",
-      "outstanding": "ฟุตบอล"
-    },
-  ]
+export type FifthActivityProps = {
+  activities: ActivityProps[];
+};
+
+export default function FifthActivity({ activities }: FifthActivityProps) {
+  if (!Array.isArray(activities)) {
+    console.error("Activities is not an array:", activities);
+    // Return null if activities is not an array
+    return null;
+  }
 
   return (
     <div className="activity-container">
@@ -29,14 +20,16 @@ export default function FifthActivity({}: ActivityProps) {
         </p>
       </div>
       <div className="activity-lists">
-        {
-          test_arr.map((activity, index) => (
-            <div className="activity" key={index}>
-              <p className="activity-name">{activity.activityId}</p>
-              <p>{activity.outstanding}</p>
-            </div>
-          ))
-        }
+        {activities.map((innerArray, index) => (
+          <div className="inner-activity-list" key={index}>
+            {innerArray.map((activity, innerIndex) => (
+              <div className="activity" key={innerIndex}>
+                <p className="activity-name">{activity.activityId}</p>
+                <p>{activity.outstanding}</p>
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
       <Button
         handleClick={() => {

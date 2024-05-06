@@ -1,26 +1,20 @@
 import { ActivityProps } from "../../types/TranscriptReport.types";
 import { Button, Tab } from "./Button";
 
-export default function FourthActivity({}: ActivityProps) {
-    const test_arr = [
-        {
-            "activityId": "166111111111",
-            "position": "รองประธาน"
-        },
-        {
-            "activityId": "166111111111",
-            "position": "รองประธาน"
-        },
-        {
-            "activityId": "166111111111",
-            "position": "รองประธาน"
-        },
-        {
-            "activityId": "166111111111",
-            "position": "รองประธาน"
-        },
-      ]
-    
+export type FourthActivityProps = {
+  activities: ActivityProps[]
+};
+
+export default function FourthActivity({ activities }: FourthActivityProps) {
+
+  console.log("Activities:", activities); // Log activities to understand its value
+
+  if (!Array.isArray(activities)) {
+    console.error("Activities is not an array:", activities);
+    // Return null if activities is not an array
+    return null;
+  }
+
   return (
     <div className="activity-container">
       <div className="activity-header">
@@ -29,14 +23,16 @@ export default function FourthActivity({}: ActivityProps) {
         </p>
       </div>
       <div className="activity-lists">
-        {
-          test_arr.map((activity, index) => (
-            <div className="activity" key={index}>
-              <p className="activity-name">{activity.activityId}</p>
-              <p>{activity.position}</p>
-            </div>
-          ))
-        }
+        {activities.map((innerArray, index) => (
+          <div className="inner-activity-list" key={index}>
+            {innerArray.map((activity: ActivityProps, innerIndex: number) => (
+              <div className="activity" key={innerIndex}>
+                <p className="activity-name">{activity.activityId}</p>
+                <p>{activity.position}</p>
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
       <Button
         handleClick={() => {

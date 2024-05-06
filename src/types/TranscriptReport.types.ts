@@ -1,4 +1,5 @@
 export type ActivityProps = {
+  map(arg0: (activity: ActivityProps, innerIndex: number) => import("react/jsx-runtime").JSX.Element): import("react").ReactNode
   activityId: string
   activityName?: string
   organization?: string
