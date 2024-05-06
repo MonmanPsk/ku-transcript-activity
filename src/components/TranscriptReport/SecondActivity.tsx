@@ -1,16 +1,29 @@
 import { ActivityProps } from "../../types/TranscriptReport.types";
 
-export default function SecondActivity({ }: ActivityProps) {
-  const test_arr = [
-    {
-      "activityName": "กิจกรรมหนึ่ง",
-      "hours": 4
-    },
-    {
-      "activityName": "กิจกรรมสอง",
-      "hours": 2
-    },
-  ]
+export type SecondActivityProps = {
+  activities: ActivityProps[]
+};
+
+export default function SecondActivity({ activities }: SecondActivityProps) {
+  const firstSub = activities.filter((activity) => {
+    if (activity.hours[0] > 0)
+      return activity
+  })
+
+  const secondSub = activities.filter((activity) => {
+    if (activity.hours[1] > 0)
+      return activity
+  })
+
+  const thirdSub = activities.filter((activity) => {
+    if (activity.hours[2] > 0)
+      return activity
+  })
+
+  const fourthSub = activities.filter((activity) => {
+    if (activity.hours[3] > 0)
+      return activity
+  })
 
   return (
     <div className="activity-container">
@@ -39,7 +52,22 @@ export default function SecondActivity({ }: ActivityProps) {
             <p >(ไม่น้อยกว่า 1 กิจกรรม)</p>
           </div>
           <div className="activity-sub-lists">
-            -
+            {
+              <>
+                {!firstSub.length && <>-</>}
+                {(firstSub.length > 0) && <>
+                  {
+                    firstSub.map((activity, index) => (
+                      <div className="activity" key={index}>
+                        <p className="activity-name">{activity.activityName}</p>
+                        <p>{activity.hours[0]}</p>
+                      </div>
+                    ))
+                  }
+                </>
+                }
+              </>
+            }
           </div>
         </div>
         <div className="activity-lists-divider"></div>
@@ -50,12 +78,20 @@ export default function SecondActivity({ }: ActivityProps) {
           </div>
           <div className="activity-sub-lists">
             {
-              test_arr.map((activity, index) => (
-                <div className="activity" key={index}>
-                  <p className="activity-name">{activity.activityName}</p>
-                  <p>{activity.hours}</p>
-                </div>
-              ))
+              <>
+                {!secondSub.length && <>-</>}
+                {(secondSub.length > 0) && <>
+                  {
+                    secondSub.map((activity, index) => (
+                      <div className="activity" key={index}>
+                        <p className="activity-name">{activity.activityName}</p>
+                        <p>{activity.hours[1]}</p>
+                      </div>
+                    ))
+                  }
+                </>
+                }
+              </>
             }
           </div>
         </div>
@@ -67,12 +103,20 @@ export default function SecondActivity({ }: ActivityProps) {
           </div>
           <div className="activity-sub-lists">
             {
-              test_arr.map((activity, index) => (
-                <div className="activity" key={index}>
-                  <p className="activity-name">{activity.activityName}</p>
-                  <p>{activity.hours}</p>
-                </div>
-              ))
+              <>
+                {!thirdSub.length && <>-</>}
+                {(thirdSub.length > 0) && <>
+                  {
+                    thirdSub.map((activity, index) => (
+                      <div className="activity" key={index}>
+                        <p className="activity-name">{activity.activityName}</p>
+                        <p>{activity.hours[2]}</p>
+                      </div>
+                    ))
+                  }
+                </>
+                }
+              </>
             }
           </div>
         </div>
@@ -83,7 +127,22 @@ export default function SecondActivity({ }: ActivityProps) {
             <p >(ไม่น้อยกว่า 1 กิจกรรม)</p>
           </div>
           <div className="activity-sub-lists">
-            -
+            {
+              <>
+                {!fourthSub.length && <>-</>}
+                {(fourthSub.length > 0) && <>
+                  {
+                    fourthSub.map((activity, index) => (
+                      <div className="activity" key={index}>
+                        <p className="activity-name">{activity.activityName}</p>
+                        <p>{activity.hours[3]}</p>
+                      </div>
+                    ))
+                  }
+                </>
+                }
+              </>
+            }
           </div>
         </div>
       </div>

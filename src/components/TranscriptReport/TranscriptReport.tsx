@@ -11,7 +11,7 @@ interface TranscriptReportProps {
   activities: ActivityProps[][];
 }
 
-export default function TranscriptReport({activities} : TranscriptReportProps) {
+export default function TranscriptReport({ activities }: TranscriptReportProps) {
   if (!activities || activities.length === 0) { // Check whether activities is undefined or not
     return (
       <div className="transcript-report-container">
@@ -20,21 +20,20 @@ export default function TranscriptReport({activities} : TranscriptReportProps) {
     );
   }
 
-  // const firstActivityProps : ActivityProps[] = activities[0];
-  // const secondActivityProps: ActivityProps[] = activities[1];
-  // const thirdActivityProps: ActivityProps[] = activities[2];
+  const firstActivityProps: ActivityProps[] = activities[0];
+  const secondActivityProps: ActivityProps[] = activities[1];
+  const thirdActivityProps: ActivityProps[] = activities[2];
   const fourthActivityProps: ActivityProps[] = activities[3];
   const fifthActivityProps: ActivityProps[] = activities[4];
-
 
   return (
     <div className="transcript-report-container">
       <p className="transcript-report-header">รายงาน Transcript กิจกรรม</p>
-      <FirstActivity />
-      <SecondActivity />
-      <ThirdActivity />
-      <FourthActivity activities={fourthActivityProps}/>
-      <FifthActivity activities={fifthActivityProps}/>
+      <FirstActivity activities={firstActivityProps} />
+      <SecondActivity activities={secondActivityProps} />
+      <ThirdActivity activities={thirdActivityProps} />
+      <FourthActivity activities={fourthActivityProps} />
+      <FifthActivity activities={fifthActivityProps} />
     </div>
   );
 }

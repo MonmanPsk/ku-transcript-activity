@@ -96,12 +96,12 @@
   flex-direction: column;
   margin-bottom: 15px;
   color: #1D1617;
+  text-align: left;
 }
 
 .activity-sub-lists-container {
   display: flex;
   flex-direction: column;
-  text-align: left;
 }
 
 .activity-sub-lists-header {
@@ -129,7 +129,7 @@
 .activity {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   font-size: 20px;
   font-weight: 500;
   color: #1D1617;
