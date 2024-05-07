@@ -1,6 +1,6 @@
 import BackButton from "./BackButton";
 
-export const FifthActivityPage = () => {
+const FifthActivityPage = () => {
   const checkData = false;
 
   const test_arr = [
@@ -41,7 +41,7 @@ export const FifthActivityPage = () => {
       </div>
       <div className="activity-page-header">
         <div className="activiity-page-header-text">
-          เข้าร่วมกิจกรรมในฐานะกรรมการบริหารองค์กรกิจกรรม
+          ได้รับคัดเลือกให้เป็นนิิสิตดีเด่นตามประกาศของมหาวิทยาลัย
         </div>
         <div>
           <div className="activity-page-table-headbar">
@@ -81,3 +81,5 @@ export const FifthActivityPage = () => {
     </>
   );
 };
+
+export default FifthActivityPage;

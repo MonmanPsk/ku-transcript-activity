@@ -1,6 +1,6 @@
 import BackButton from "./BackButton";
 
-export const FourthActivityPage = () => {
+const FourthActivityPage = () => {
   const checkData = true;
 
   const test_arr = [
@@ -81,3 +81,5 @@ export const FourthActivityPage = () => {
     </>
   );
 };
+
+export default FourthActivityPage;

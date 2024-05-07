@@ -11,14 +11,25 @@ import {
 } from "../../types/TranscriptReport.types";
 import { name } from "../../types/Profile.types";
 
+
 function Home() {
-  const [userData, setUserData] = useState<StudentProps>();
+  const [userData, setUserData] = useState<StudentProps | null>(null);
 
   useEffect(() => {
-    fetchUser().then((data) => {
-      setUserData(data);
-    });
-  }, []);
+    // Fetch data only if userData is null (not fetched before)
+    if (userData === null) {
+      fetchUser().then((data) => {
+        if (data) {
+          setUserData(data);
+        } else {
+          // Handle case where fetchUser() returns undefined
+          console.error("fetchUser() returned undefined");
+        }
+      });
+    }
+    // Add userData to dependency array to ensure useEffect runs only when userData changes
+  }, [userData]); // useEffect will only run when userData changes
+
 
   const name = {
     first: userData?.firstname,
@@ -83,8 +94,8 @@ function Home() {
     totalActivity: getActivityAmount(),
   };
 
-  const activitiesData: ActivityProps[][] =
-    userData?.activities as ActivityProps[][];
+
+  const activitiesData: ActivityProps[][] = userData?.activities ?? [];
 
   return (
     <>
@@ -92,12 +103,12 @@ function Home() {
       <Profile
         name={profile.name as name}
         email={profile.email as string}
-        passStatus={profile.passStatus as boolean}
-        totalHours={profile.totalHours as number}
-        totalActivity={profile.totalActivity as number}
+        passStatus={profile.passStatus}
+        totalHours={profile.totalHours}
+        totalActivity={profile.totalActivity}
       />
-      <TranscriptReport activities={activitiesData} />
       <Downloader />
+      <TranscriptReport activities={activitiesData} />
     </>
   );
 }
