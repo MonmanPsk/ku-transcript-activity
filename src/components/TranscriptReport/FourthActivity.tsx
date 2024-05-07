@@ -1,13 +1,12 @@
 import { ActivityProps } from "../../types/TranscriptReport.types";
-import { Button, Tab } from "./Button";
+import { ButtonAll } from "./ButtonAll";
 
 export type FourthActivityProps = {
-  activities: ActivityProps[]
+  activities: ActivityProps[];
 };
 
 export default function FourthActivity({ activities }: FourthActivityProps) {
-
-  console.log("Activities:", activities); // Log activities to understand its value
+  // console.log("Activities:", activities); // Log activities to understand its value
 
   if (!Array.isArray(activities)) {
     console.error("Activities is not an array:", activities);
@@ -34,11 +33,7 @@ export default function FourthActivity({ activities }: FourthActivityProps) {
           </div>
         ))}
       </div>
-      <Button
-        handleClick={() => {
-          Tab("https://www.youtube.com/");
-        }}
-      />
+      <ButtonAll path="/fourth-activity" />
     </div>
   );
 }

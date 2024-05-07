@@ -11,8 +11,11 @@ interface TranscriptReportProps {
   activities: ActivityProps[][];
 }
 
-export default function TranscriptReport({activities} : TranscriptReportProps) {
-  if (!activities || activities.length === 0) { // Check whether activities is undefined or not
+export default function TranscriptReport({
+  activities,
+}: TranscriptReportProps) {
+  if (!activities || activities.length === 0) {
+    // Check whether activities is undefined or not
     return (
       <div className="transcript-report-container">
         <p className="transcript-report-header">No activities found</p>
@@ -26,15 +29,14 @@ export default function TranscriptReport({activities} : TranscriptReportProps) {
   const fourthActivityProps: ActivityProps[] = activities[3];
   const fifthActivityProps: ActivityProps[] = activities[4];
 
-
   return (
     <div className="transcript-report-container">
       <p className="transcript-report-header">รายงาน Transcript กิจกรรม</p>
       <FirstActivity />
       <SecondActivity />
       <ThirdActivity />
-      <FourthActivity activities={fourthActivityProps}/>
-      <FifthActivity activities={fifthActivityProps}/>
+      <FourthActivity activities={fourthActivityProps} />
+      <FifthActivity activities={fifthActivityProps} />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "DB Ozone X";   /*Can be any text*/
+  font-family: "DB Ozone X"; /*Can be any text*/
   src: local("DB Ozone X v3.2"),
     url("../fonts/DB\ Ozone\ X\ v3.2.ttf") format("truetype");
 }
@@ -7,7 +7,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'DB Ozone X';
+  font-family: "DB Ozone X";
 }
 
 body {

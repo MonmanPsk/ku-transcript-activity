@@ -1,5 +1,5 @@
 import { ActivityProps } from "../../types/TranscriptReport.types";
-import { Button, Tab } from "./Button";
+import { ButtonAll } from "./ButtonAll";
 
 export type FifthActivityProps = {
   activities: ActivityProps[];
@@ -16,7 +16,7 @@ export default function FifthActivity({ activities }: FifthActivityProps) {
     <div className="activity-container">
       <div className="activity-header">
         <p className="activity-header-title">
-          ได้รับคัดเลือกให้เป็นนิิสิตดีเด่นตามประกาศของมหาวิทยาลัย
+          ได้รับคัดเลือกให้เป็นนิสิตดีเด่นตามประกาศของมหาวิทยาลัย
         </p>
       </div>
       <div className="activity-lists">
@@ -31,11 +31,7 @@ export default function FifthActivity({ activities }: FifthActivityProps) {
           </div>
         ))}
       </div>
-      <Button
-        handleClick={() => {
-          Tab("https://www.youtube.com/");
-        }}
-      />
+      <ButtonAll path="/fifth-activity" />
     </div>
   );
 }
