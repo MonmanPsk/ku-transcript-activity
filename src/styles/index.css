@@ -1,7 +1,7 @@
 @font-face {
   font-family: "DB Ozone X"; /*Can be any text*/
   src: local("DB Ozone X v3.2"),
-    url("../fonts/DB\ Ozone\ X\ v3.2.ttf") format("truetype");
+    url("../fonts/DB Ozone X v3.2.ttf") format("truetype");
 }
 
 * {

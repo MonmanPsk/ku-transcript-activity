@@ -162,6 +162,7 @@
   width: 94px;
   appearance: none;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .back-button-container {
@@ -177,6 +178,7 @@
   border: none;
   border-radius: 8px;
   background-color: rgba(220, 223, 228, 1);
+  cursor: pointer;
 }
 
 .back-button img {
