@@ -1,5 +1,5 @@
-import { ActivityProps } from "../../types/TranscriptReport.types";
-import BackButton from "./BackButton";
+import { ActivityProps } from "../types/TranscriptReport.types";
+import BackButton from "../components/BackButton";
 import { useLocation } from "react-router-dom";
 
 const FourthActivityPage = () => {

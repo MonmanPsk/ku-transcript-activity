@@ -1,29 +1,35 @@
 import { ActivityProps } from "../../types/TranscriptReport.types";
+import { ButtonAll } from "./ButtonAll";
 
 export type SecondActivityProps = {
   activities: ActivityProps[]
 };
 
 export default function SecondActivity({ activities }: SecondActivityProps) {
+  const totalActivityAmount = activities.length;
+  const totalHours = Array.from(activities, (activity) => activity.hours).reduce((prev, curr) => {
+    return (prev as number) + (curr as number[]).reduce((a, b) => a + b, 0)
+  }, 0);
+
   const firstSub = activities.filter((activity) => {
-    if (activity.hours[0] > 0)
-      return activity
-  })
+    if ((activity.hours as number[])[0] > 0)
+      return activity;
+  });
 
   const secondSub = activities.filter((activity) => {
-    if (activity.hours[1] > 0)
-      return activity
-  })
+    if ((activity.hours as number[])[1] > 0)
+      return activity;
+  });
 
   const thirdSub = activities.filter((activity) => {
-    if (activity.hours[2] > 0)
-      return activity
-  })
+    if ((activity.hours as number[])[2] > 0)
+      return activity;
+  });
 
   const fourthSub = activities.filter((activity) => {
-    if (activity.hours[3] > 0)
-      return activity
-  })
+    if ((activity.hours as number[])[3] > 0)
+      return activity;
+  });
 
   return (
     <div className="activity-container">
@@ -33,16 +39,16 @@ export default function SecondActivity({ activities }: SecondActivityProps) {
       </div>
       <div className="activity-tags-container">
         <div className="activity-tag">
-          <p>7 กิจกรรม</p>
+          <p>{totalActivityAmount} กิจกรรม</p>
         </div>
         <div className="activity-hours-tag">
-          <p>ทั้งหมด 102 ชั่วโมง</p>
+          <p>ทั้งหมด {totalHours} ชั่วโมง</p>
         </div>
       </div>
       <div className="activity-progress">
-        <p>4/3</p>
+        <p>4/4</p>
         <div className="activity-progress-bottombar">
-          <div className="activity-progress-frontbar"></div>
+          <div className="activity-progress-frontbar" style={{ width: `${100 * totalActivityAmount / 4}%` }}></div>
         </div>
       </div>
       <div className="activity-lists">
@@ -60,7 +66,7 @@ export default function SecondActivity({ activities }: SecondActivityProps) {
                     firstSub.map((activity, index) => (
                       <div className="activity" key={index}>
                         <p className="activity-name">{activity.activityName}</p>
-                        <p>{activity.hours[0]}</p>
+                        <p>{(activity.hours as number[])[0]}</p>
                       </div>
                     ))
                   }
@@ -85,7 +91,7 @@ export default function SecondActivity({ activities }: SecondActivityProps) {
                     secondSub.map((activity, index) => (
                       <div className="activity" key={index}>
                         <p className="activity-name">{activity.activityName}</p>
-                        <p>{activity.hours[1]}</p>
+                        <p>{(activity.hours as number[])[1]}</p>
                       </div>
                     ))
                   }
@@ -110,7 +116,7 @@ export default function SecondActivity({ activities }: SecondActivityProps) {
                     thirdSub.map((activity, index) => (
                       <div className="activity" key={index}>
                         <p className="activity-name">{activity.activityName}</p>
-                        <p>{activity.hours[2]}</p>
+                        <p>{(activity.hours as number[])[2]}</p>
                       </div>
                     ))
                   }
@@ -135,7 +141,7 @@ export default function SecondActivity({ activities }: SecondActivityProps) {
                     fourthSub.map((activity, index) => (
                       <div className="activity" key={index}>
                         <p className="activity-name">{activity.activityName}</p>
-                        <p>{activity.hours[3]}</p>
+                        <p>{(activity.hours as number[])[3]}</p>
                       </div>
                     ))
                   }
@@ -146,7 +152,7 @@ export default function SecondActivity({ activities }: SecondActivityProps) {
           </div>
         </div>
       </div>
-      <button className="activity-details-button">ทั้งหมด</button>
+      <ButtonAll path="/second-activity" data={[]} />
     </div>
   );
 }

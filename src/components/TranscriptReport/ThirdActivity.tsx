@@ -1,10 +1,14 @@
 import { ActivityProps } from "../../types/TranscriptReport.types";
+import { ButtonAll } from "./ButtonAll";
 
 export type ThirdActivityProps = {
   activities: ActivityProps[]
 };
 
 export default function ThirdActivity({ activities }: ThirdActivityProps) {
+  const totalActivityAmount = activities.length;
+  const totalHours = Array.from(activities, (activity) => activity.hours).reduce((prev, curr) => (prev as number) + (curr as number), 0);
+
   return (
     <div className="activity-container">
       <div className="activity-header">
@@ -13,16 +17,16 @@ export default function ThirdActivity({ activities }: ThirdActivityProps) {
       </div>
       <div className="activity-tags-container">
         <div className="activity-tag">
-          <p>1 กิจกรรม</p>
+          <p>{totalActivityAmount} กิจกรรม</p>
         </div>
         <div className="activity-hours-tag">
-          <p>ทั้งหมด 8 ชั่วโมง</p>
+          <p>ทั้งหมด {totalHours} ชั่วโมง</p>
         </div>
       </div>
       <div className="activity-progress">
-        <p>4/3</p>
+        <p>{totalActivityAmount}/1</p>
         <div className="activity-progress-bottombar">
-          <div className="activity-progress-frontbar"></div>
+          <div className="activity-progress-frontbar" style={{ width: `${100 * totalActivityAmount / 1}%` }}></div>
         </div>
       </div>
       <div className="activity-lists">
@@ -33,7 +37,7 @@ export default function ThirdActivity({ activities }: ThirdActivityProps) {
           </div>
         ))}
       </div>
-      <button className="activity-details-button">ทั้งหมด</button>
+      <ButtonAll path="/third-activity" data={[]} />
     </div>
   );
 }

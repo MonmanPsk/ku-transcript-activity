@@ -1,4 +1,4 @@
-import { UrlProps } from "../../types/TranscriptReport.types";
+import { UrlProps } from "../types/TranscriptReport.types";
 import { useNavigate } from "react-router-dom";
 
 function BackButton(props: UrlProps) {
