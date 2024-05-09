@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 const FifthActivityPage = () => {
   const location = useLocation();
-  const checkData = true;
+  const checkData = false;
 
   return (
     <>

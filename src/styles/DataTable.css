@@ -1,0 +1,33 @@
+.data-table {
+  margin-bottom: 1rem;
+}
+
+.toggle-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  margin-right: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.arrow-icon.expanded {
+  transform: rotate(90deg);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+}
+
+th {
+  background-color: #f2f2f2;
+}
