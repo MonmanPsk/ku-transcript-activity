@@ -6,8 +6,6 @@ const FourthActivityPage = () => {
   const checkData = true;
   const location = useLocation();
 
-  // console.log(location);
-
   return (
     <>
       <div className="back-button-container">
@@ -28,22 +26,24 @@ const FourthActivityPage = () => {
             <ul>
               <li className="activity-table-list">
                 {checkData ? (
-                  location.state.map((activity: ActivityProps, index: number) => (
-                    <div className="activity-page-activity" key={index}>
-                      <p className="activity-page-activity-id">
-                        {activity.activityId}
-                      </p>
-                      <p className="activity-page-activity-organization">
-                        {activity.organization}
-                      </p>
-                      <p className="activity-page-activity-position">
-                        {activity.position}
-                      </p>
-                      <p className="activity-page-activity-hours">
-                        {activity.hours}
-                      </p>
-                    </div>
-                  ))
+                  location.state.map(
+                    (activity: ActivityProps, index: number) => (
+                      <div className="activity-page-activity" key={index}>
+                        <p className="activity-page-activity-id">
+                          {activity.activityId}
+                        </p>
+                        <p className="activity-page-activity-organization">
+                          {activity.organization}
+                        </p>
+                        <p className="activity-page-activity-position">
+                          {activity.position}
+                        </p>
+                        <p className="activity-page-activity-hours">
+                          {activity.hours}
+                        </p>
+                      </div>
+                    )
+                  )
                 ) : (
                   <div className="no-data-text">-</div>
                 )}

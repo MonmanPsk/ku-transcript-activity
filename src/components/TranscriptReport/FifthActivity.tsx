@@ -39,8 +39,7 @@ export default function FifthActivity({ activities }: FifthActivityProps) {
 
   if (!Array.isArray(activities)) {
     console.error("Activities is not an array:", activities);
-    // Return null if activities is not an array
-    return null;
+    return null; // Return null if activities is not an array
   }
 
   return (
@@ -50,19 +49,7 @@ export default function FifthActivity({ activities }: FifthActivityProps) {
           ได้รับคัดเลือกให้เป็นนิสิตดีเด่นตามประกาศของมหาวิทยาลัย
         </p>
       </div>
-      {/* <div className="activity-lists">
-        {activities.map((innerArray, index) => (
-          <div className="inner-activity-list" key={index}>
-            {innerArray.map((activity, innerIndex) => (
-              <div className="activity" key={innerIndex}>
-                <p className="activity-name">{activity.activityId}</p>
-                <p>{activity.outstanding}</p>
-              </div>
-            ))}
-          </div>
-        ))}
-      </div> */}
-      <ButtonAll path="/fifth-activity" data={test_arr}/>
+      <ButtonAll path="/fifth-activity" data={test_arr} />
     </div>
   );
 }
