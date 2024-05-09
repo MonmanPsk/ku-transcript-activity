@@ -11,7 +11,6 @@ import {
 } from "../../types/TranscriptReport.types";
 import { name } from "../../types/Profile.types";
 
-
 function Home() {
   const [userData, setUserData] = useState<StudentProps | null>(null);
 
@@ -29,12 +28,6 @@ function Home() {
     }
     // Add userData to dependency array to ensure useEffect runs only when userData changes
   }, [userData]); // useEffect will only run when userData changes
-
-
-  const name = {
-    first: userData?.firstname,
-    last: userData?.lastname,
-  };
 
   const sumHours = () => {
     // Check if userData and userData.activities are defined
@@ -87,13 +80,12 @@ function Home() {
   };
 
   const profile = {
-    name: name,
+    name: { first: userData?.firstname, last: userData?.lastname },
     email: userData?.email,
     passStatus: false,
     totalHours: sumHours(),
     totalActivity: getActivityAmount(),
   };
-
 
   const activitiesData: ActivityProps[][] = userData?.activities ?? [];
 

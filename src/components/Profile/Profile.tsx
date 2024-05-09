@@ -4,20 +4,20 @@ import ProfileHeader from "./ProfileHeader";
 import ProfileBottom from "./ProfileBottom";
 import Status from "./Status";
 
-export default function Profile(props: ProfileProps) {
+export default function Profile({ name, email, passStatus, totalHours, totalActivity }: ProfileProps) {
   return (
     // return profile component
     <div className="page1-profile-section">
       <ProfileHeader
-        first={props.name.first}
-        last={props.name.last}
-        email={props.email}
+        first={name.first}
+        last={name.last}
+        email={email}
       >
-        <Status pass={props.passStatus} />
+        <Status pass={passStatus} />
       </ProfileHeader>
       <ProfileBottom
-        totalHours={props.totalHours}
-        totalActivity={props.totalActivity}
+        totalHours={totalHours}
+        totalActivity={totalActivity}
       />
     </div>
   );
