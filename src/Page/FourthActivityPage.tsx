@@ -1,10 +1,10 @@
-import { ActivityProps } from "../../types/TranscriptReport.types";
-import BackButton from "./BackButton";
+import { ActivityProps } from "../types/TranscriptReport.types";
+import BackButton from "../components/BackButton";
 import { useLocation } from "react-router-dom";
 
-const FifthActivityPage = () => {
+const FourthActivityPage = () => {
+  const checkData = true;
   const location = useLocation();
-  const checkData = false;
 
   return (
     <>
@@ -13,7 +13,7 @@ const FifthActivityPage = () => {
       </div>
       <div className="activity-page-header">
         <div className="activiity-page-header-text">
-          ได้รับคัดเลือกให้เป็นนิิสิตดีเด่นตามประกาศของมหาวิทยาลัย
+          เข้าร่วมกิจกรรมในฐานะกรรมการบริหารองค์กรกิจกรรม
         </div>
         <div>
           <div className="activity-page-table-headbar">
@@ -56,4 +56,4 @@ const FifthActivityPage = () => {
   );
 };
 
-export default FifthActivityPage;
+export default FourthActivityPage;

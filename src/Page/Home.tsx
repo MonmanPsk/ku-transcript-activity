@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
-import fetchUser from "../../api/user";
-import Header from "../Header";
-import Profile from "../Profile/Profile";
-import Downloader from "../Downloader";
-import TranscriptReport from "../TranscriptReport/TranscriptReport";
-import "../../styles/App.css";
+import fetchUser from "../api/user";
+import Header from "../components/Header";
+import Profile from "../components/Profile/Profile";
+import Downloader from "../components/Downloader";
+import TranscriptReport from "../components/TranscriptReport/TranscriptReport";
+import "../styles/App.css";
 import {
   ActivityProps,
   StudentProps,
-} from "../../types/TranscriptReport.types";
-import { name } from "../../types/Profile.types";
-import { getActivityAmount } from "../../modules/getActivityAmount.modules";
-import { sumHoursNestedArray } from "../../modules/totalHours.modules";
+} from "../types/TranscriptReport.types";
+import { name } from "../types/Profile.types";
+import { getActivityAmount } from "../modules/getActivityAmount.modules";
+import { sumHoursNestedArray } from "../modules/totalHours.modules";
 
 function Home() {
   const [userData, setUserData] = useState<StudentProps | null>(null);
