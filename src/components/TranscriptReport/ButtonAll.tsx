@@ -9,7 +9,7 @@ export function ButtonAll(props: UrlProps) {
       <button
         className="activity-details-button"
         onClick={() => {
-          navigate(props.path);
+          navigate(props.path , {state: props.data});
         }}
       >
         ทั้งหมด

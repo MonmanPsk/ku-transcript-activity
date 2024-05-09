@@ -27,4 +27,5 @@ export type StudentProps = {
 
 export type UrlProps = {
   path: string;
+  data?: object;
 };

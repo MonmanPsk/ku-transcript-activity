@@ -6,6 +6,37 @@ export type FourthActivityProps = {
 };
 
 export default function FourthActivity({ activities }: FourthActivityProps) {
+  const test_arr = [
+    {
+      activityId: "166040010007",
+      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
+      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
+      position: "ผู้เข้าร่วมโครงการ",
+      hours: 8,
+    },
+    {
+      activityId: "166040010007",
+      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
+      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
+      position: "ผู้เข้าร่วมโครงการ",
+      hours: 8,
+    },
+    {
+      activityId: "166040010007",
+      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
+      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
+      position: "ผู้เข้าร่วมโครงการ",
+      hours: 8,
+    },
+    {
+      activityId: "166040010007",
+      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
+      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
+      position: "ผู้เข้าร่วมโครงการ",
+      hours: 8,
+    },
+  ];
+
   // console.log("Activities:", activities); // Log activities to understand its value
 
   if (!Array.isArray(activities)) {
@@ -21,7 +52,7 @@ export default function FourthActivity({ activities }: FourthActivityProps) {
           เข้าร่วมกิจกรรมในฐานะกรรมการบริหารองค์กรกิจกรรม
         </p>
       </div>
-      <div className="activity-lists">
+      {/* <div className="activity-lists">
         {activities.map((innerArray, index) => (
           <div className="inner-activity-list" key={index}>
             {innerArray.map((activity: ActivityProps, innerIndex: number) => (
@@ -32,8 +63,8 @@ export default function FourthActivity({ activities }: FourthActivityProps) {
             ))}
           </div>
         ))}
-      </div>
-      <ButtonAll path="/fourth-activity" />
+      </div> */}
+      <ButtonAll path="/fourth-activity" data={test_arr} />
     </div>
   );
 }

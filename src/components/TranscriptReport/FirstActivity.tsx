@@ -1,7 +1,7 @@
-import { ActivityProps } from "../../types/TranscriptReport.types"
+import { ActivityProps } from "../../types/TranscriptReport.types";
 
 export type FirstActivityProps = {
-  activities: ActivityProps[]
+  activities: ActivityProps[];
 };
 
 export default function FirstActivity({ activities }: FirstActivityProps) {
@@ -26,14 +26,12 @@ export default function FirstActivity({ activities }: FirstActivityProps) {
         </div>
       </div>
       <div className="activity-lists">
-        {
-          activities  .map((activity, index) => (
-            <div className="activity" key={index}>
-              <p className="activity-name">{activity.activityName}</p>
-              <p>{activity.hours}</p>
-            </div>
-          ))
-        }
+        {activities.map((activity, index) => (
+          <div className="activity" key={index}>
+            <p className="activity-name">{activity.activityName}</p>
+            <p>{activity.hours}</p>
+          </div>
+        ))}
       </div>
       <button className="activity-details-button">ทั้งหมด</button>
     </div>

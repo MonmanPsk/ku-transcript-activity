@@ -6,6 +6,37 @@ export type FifthActivityProps = {
 };
 
 export default function FifthActivity({ activities }: FifthActivityProps) {
+  const test_arr = [
+    {
+      activityId: "166040010007",
+      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
+      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
+      position: "Doggo",
+      hours: 8,
+    },
+    {
+      activityId: "166040010007",
+      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
+      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
+      position: "Doggo",
+      hours: 8,
+    },
+    {
+      activityId: "166040010007",
+      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
+      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
+      position: "Doggo",
+      hours: 8,
+    },
+    {
+      activityId: "166040010007",
+      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
+      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
+      position: "Doggo",
+      hours: 8,
+    },
+  ];
+
   if (!Array.isArray(activities)) {
     console.error("Activities is not an array:", activities);
     // Return null if activities is not an array
@@ -19,7 +50,7 @@ export default function FifthActivity({ activities }: FifthActivityProps) {
           ได้รับคัดเลือกให้เป็นนิสิตดีเด่นตามประกาศของมหาวิทยาลัย
         </p>
       </div>
-      <div className="activity-lists">
+      {/* <div className="activity-lists">
         {activities.map((innerArray, index) => (
           <div className="inner-activity-list" key={index}>
             {innerArray.map((activity, innerIndex) => (
@@ -30,8 +61,8 @@ export default function FifthActivity({ activities }: FifthActivityProps) {
             ))}
           </div>
         ))}
-      </div>
-      <ButtonAll path="/fifth-activity" />
+      </div> */}
+      <ButtonAll path="/fifth-activity" data={test_arr}/>
     </div>
   );
 }

@@ -1,38 +1,10 @@
+import { ActivityProps } from "../../types/TranscriptReport.types";
 import BackButton from "./BackButton";
+import { useLocation } from "react-router-dom";
 
 const FifthActivityPage = () => {
-  const checkData = false;
-
-  const test_arr = [
-    {
-      activityId: "166040010007",
-      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
-      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
-      position: "Doggo",
-      hours: 8,
-    },
-    {
-      activityId: "166040010007",
-      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
-      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
-      position: "Doggo",
-      hours: 8,
-    },
-    {
-      activityId: "166040010007",
-      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
-      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
-      position: "Doggo",
-      hours: 8,
-    },
-    {
-      activityId: "166040010007",
-      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
-      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
-      position: "Doggo",
-      hours: 8,
-    },
-  ];
+  const location = useLocation();
+  const checkData = true;
 
   return (
     <>
@@ -54,22 +26,24 @@ const FifthActivityPage = () => {
             <ul>
               <li className="activity-table-list">
                 {checkData ? (
-                  test_arr.map((activity, index) => (
-                    <div className="activity-page-activity" key={index}>
-                      <p className="activity-page-activity-id">
-                        {activity.activityId}
-                      </p>
-                      <p className="activity-page-activity-organization">
-                        {activity.organization}
-                      </p>
-                      <p className="activity-page-activity-position">
-                        {activity.position}
-                      </p>
-                      <p className="activity-page-activity-hours">
-                        {activity.hours}
-                      </p>
-                    </div>
-                  ))
+                  location.state.map(
+                    (activity: ActivityProps, index: number) => (
+                      <div className="activity-page-activity" key={index}>
+                        <p className="activity-page-activity-id">
+                          {activity.activityId}
+                        </p>
+                        <p className="activity-page-activity-organization">
+                          {activity.organization}
+                        </p>
+                        <p className="activity-page-activity-position">
+                          {activity.position}
+                        </p>
+                        <p className="activity-page-activity-hours">
+                          {activity.hours}
+                        </p>
+                      </div>
+                    )
+                  )
                 ) : (
                   <div className="no-data-text">-</div>
                 )}

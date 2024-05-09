@@ -1,38 +1,12 @@
+import { ActivityProps } from "../../types/TranscriptReport.types";
 import BackButton from "./BackButton";
+import { useLocation } from "react-router-dom";
 
 const FourthActivityPage = () => {
   const checkData = true;
+  const location = useLocation();
 
-  const test_arr = [
-    {
-      activityId: "166040010007",
-      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
-      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
-      position: "ผู้เข้าร่วมโครงการ",
-      hours: 8,
-    },
-    {
-      activityId: "166040010007",
-      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
-      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
-      position: "ผู้เข้าร่วมโครงการ",
-      hours: 8,
-    },
-    {
-      activityId: "166040010007",
-      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
-      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
-      position: "ผู้เข้าร่วมโครงการ",
-      hours: 8,
-    },
-    {
-      activityId: "166040010007",
-      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
-      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
-      position: "ผู้เข้าร่วมโครงการ",
-      hours: 8,
-    },
-  ];
+  // console.log(location);
 
   return (
     <>
@@ -54,7 +28,7 @@ const FourthActivityPage = () => {
             <ul>
               <li className="activity-table-list">
                 {checkData ? (
-                  test_arr.map((activity, index) => (
+                  location.state.map((activity: ActivityProps, index: number) => (
                     <div className="activity-page-activity" key={index}>
                       <p className="activity-page-activity-id">
                         {activity.activityId}
