@@ -1,4 +1,5 @@
 import { ActivityProps } from "../../types/TranscriptReport.types";
+import DataTable from "../DataTable";
 import { ButtonAll } from "./ButtonAll";
 
 export type FirstActivityProps = {
@@ -8,6 +9,13 @@ export type FirstActivityProps = {
 export default function FirstActivity({ activities }: FirstActivityProps) {
   const totalActivityAmount = activities.length;
   const totalHours = Array.from(activities, (activity) => activity.hours).reduce((prev, curr) => (prev as number) + (curr as number), 0);
+
+  const firstTable: JSX.Element[] = activities.map((activity, index) => (
+    <div className="activity" key={index}>
+      <p className="activity-name">{activity.activityName}</p>
+      <p>{activity.hours}</p>
+    </div>
+  ));
 
   return (
     <div className="activity-container">
@@ -30,12 +38,7 @@ export default function FirstActivity({ activities }: FirstActivityProps) {
         </div>
       </div>
       <div className="activity-lists">
-        {activities.map((activity, index) => (
-          <div className="activity" key={index}>
-            <p className="activity-name">{activity.activityName}</p>
-            <p>{activity.hours}</p>
-          </div>
-        ))}
+        <DataTable child={firstTable}/>
       </div>
       <ButtonAll path="/first-activity" data={[]} />
     </div>

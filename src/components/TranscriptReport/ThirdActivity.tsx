@@ -1,13 +1,24 @@
 import { ActivityProps } from "../../types/TranscriptReport.types";
+import DataTable from "../DataTable";
 import { ButtonAll } from "./ButtonAll";
 
 export type ThirdActivityProps = {
-  activities: ActivityProps[]
+  activities: ActivityProps[];
 };
 
 export default function ThirdActivity({ activities }: ThirdActivityProps) {
   const totalActivityAmount = activities.length;
-  const totalHours = Array.from(activities, (activity) => activity.hours).reduce((prev, curr) => (prev as number) + (curr as number), 0);
+  const totalHours = Array.from(
+    activities,
+    (activity) => activity.hours
+  ).reduce((prev, curr) => (prev as number) + (curr as number), 0);
+
+  const thirdTable: JSX.Element[] = activities.map((activity, index) => (
+    <div className="activity" key={index}>
+      <p className="activity-name">{activity.activityName}</p>
+      <p>{activity.hours}</p>
+    </div>
+  ));
 
   return (
     <div className="activity-container">
@@ -26,16 +37,14 @@ export default function ThirdActivity({ activities }: ThirdActivityProps) {
       <div className="activity-progress">
         <p>{totalActivityAmount}/1</p>
         <div className="activity-progress-bottombar">
-          <div className="activity-progress-frontbar" style={{ width: `${100 * totalActivityAmount / 1}%` }}></div>
+          <div
+            className="activity-progress-frontbar"
+            style={{ width: `${(100 * totalActivityAmount) / 1}%` }}
+          ></div>
         </div>
       </div>
       <div className="activity-lists">
-        {activities.map((activity, index) => (
-          <div className="activity" key={index}>
-            <p className="activity-name">{activity.activityName}</p>
-            <p>{activity.hours}</p>
-          </div>
-        ))}
+        <DataTable child={thirdTable} />
       </div>
       <ButtonAll path="/third-activity" data={[]} />
     </div>

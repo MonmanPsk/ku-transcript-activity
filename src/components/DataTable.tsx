@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import "../styles/DataTable.css"; // Import your CSS file
-import { ActivityProps } from "../types/TranscriptReport.types";
 
 interface DataTableProps {
-  data: ActivityProps[];
+  child: React.ReactNode;
 }
 
-const DataTable: React.FC<DataTableProps> = ({ data}) => {
+const DataTable: React.FC<DataTableProps> = ({ child }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpanded = () => {
@@ -23,12 +22,7 @@ const DataTable: React.FC<DataTableProps> = ({ data}) => {
       </div>
       {isExpanded && (
         <div className="activity-lists">
-        {data.map((activity, index) => (
-          <div className="activity" key={index}>
-            <p className="activity-name">{activity.activityName}</p>
-            <p>{activity.hours}</p>
-          </div>
-        ))}
+          {child}
         </div>
       )}
     </div>

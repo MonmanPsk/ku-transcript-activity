@@ -4,7 +4,7 @@ import { ActivityProps } from "../types/TranscriptReport.types";
 
 function SecondActivityPage() {
     const location = useLocation();
-    const checkData = true;
+    const checkData = false;
 
     return (
         <>
