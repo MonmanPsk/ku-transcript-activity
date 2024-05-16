@@ -29,7 +29,7 @@ function Home() {
       });
     }
     // Add userData to dependency array to ensure useEffect runs only when userData changes
-  }, [userData]); // useEffect will only run when userData changes
+  }, []); // useEffect will only run when userData changes
 
   const profile = {
     name: { first: userData?.firstname, last: userData?.lastname },

@@ -1,4 +1,5 @@
 import { ActivityProps } from "../../types/TranscriptReport.types";
+import DataTable from "../DataTable";
 import { ButtonAll } from "./ButtonAll";
 
 export type FifthActivityProps = {
@@ -6,35 +7,19 @@ export type FifthActivityProps = {
 };
 
 export default function FifthActivity({ activities }: FifthActivityProps) {
-  const test_arr = [
-    {
-      activityId: "166040010007",
-      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
-      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
-      position: "-",
-      hours: 8,
-    },
-    {
-      activityId: "166040010007",
-      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
-      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
-      position: "-",
-      hours: 8,
-    },
-    {
-      activityId: "166040010007",
-      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
-      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
-      position: "-",
-      hours: 8,
-    },
-    {
-      activityId: "166040010007",
-      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
-      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
-      position: "-",
-      hours: 8,
-    },
+  const fifthTable: JSX.Element[] = [
+    <div className="activity-lists">
+      {activities.map((innerArray, index) => (
+        <div className="inner-activity-list" key={index}>
+          {innerArray.map((activity: ActivityProps, innerIndex: number) => (
+            <div className="activity" key={innerIndex}>
+              <p className="activity-name">{activity.activityId}</p>
+              <p>{activity.outstanding}</p>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>,
   ];
 
   if (!Array.isArray(activities)) {
@@ -49,7 +34,8 @@ export default function FifthActivity({ activities }: FifthActivityProps) {
           ได้รับคัดเลือกให้เป็นนิสิตดีเด่นตามประกาศของมหาวิทยาลัย
         </p>
       </div>
-      <ButtonAll path="/fifth-activity" data={test_arr} />
+      <DataTable child={fifthTable} />
+      <ButtonAll path="/fifth-activity" data={activities} />
     </div>
   );
 }

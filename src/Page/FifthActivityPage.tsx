@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 const FifthActivityPage = () => {
   const location = useLocation();
-  const checkData = false;
+  const activities: ActivityProps[][] = location.state;
 
   return (
     <>
@@ -12,8 +12,8 @@ const FifthActivityPage = () => {
         <BackButton path="/" />
       </div>
       <div className="activity-page-header">
-        <div className="activiity-page-header-text">
-          ได้รับคัดเลือกให้เป็นนิิสิตดีเด่นตามประกาศของมหาวิทยาลัย
+        <div className="activity-page-header-text">
+        ได้รับคัดเลือกให้เป็นนิสิตดีเด่นตามประกาศของมหาวิทยาลัย
         </div>
         <div>
           <div className="activity-page-table-headbar">
@@ -25,25 +25,27 @@ const FifthActivityPage = () => {
           <div className="activity-page-table-content">
             <ul>
               <li className="activity-table-list">
-                {checkData ? (
-                  location.state.map(
-                    (activity: ActivityProps, index: number) => (
-                      <div className="activity-page-activity" key={index}>
-                        <p className="activity-page-activity-id">
-                          {activity.activityId}
-                        </p>
-                        <p className="activity-page-activity-organization">
-                          {activity.organization}
-                        </p>
-                        <p className="activity-page-activity-position">
-                          {activity.position}
-                        </p>
-                        <p className="activity-page-activity-hours">
-                          {activity.hours}
-                        </p>
-                      </div>
-                    )
-                  )
+                {activities.length > 0 ? (
+                  activities.map((innerArray, index) => (
+                    <div key={index} className="inner-activity-list">
+                      {innerArray.map((activity, innerIndex) => (
+                        <div className="activity-page-activity" key={innerIndex}>
+                          <p className="activity-page-activity-id">
+                            {activity.activityId ? activity.activityId : "-"}
+                          </p>
+                          <p className="activity-page-activity-organization">
+                            {activity.organization ? activity.organization : "-"}
+                          </p>
+                          <p className="activity-page-activity-position">
+                            {activity.position ? activity.position : "-"}
+                          </p>
+                          <p className="activity-page-activity-hours">
+                            {activity.hours ? activity.hours : "-"}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  ))
                 ) : (
                   <div className="no-data-text">-</div>
                 )}
