@@ -13,19 +13,26 @@ const DataTable: React.FC<DataTableProps> = ({ child }) => {
   };
 
   return (
-    <div className="data-table">
-      <div className="toggle-button" onClick={toggleExpanded}>
-        <span className={`arrow-icon ${isExpanded ? "expanded" : ""}`}>
-          &#x25B6;
-        </span>
-        <span>Toggle Table</span>
-      </div>
+    <>
       {isExpanded && (
-        <div className="activity-lists">
+        <div className="activity-data-lists popup">
           {child}
         </div>
       )}
-    </div>
+      <div className="toggle-button" onClick={toggleExpanded}>
+        {!isExpanded &&
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 arrow-icon popup">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+          </svg>
+
+        }
+        {isExpanded &&
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 arrow-icon popup">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+          </svg>
+        }
+      </div>
+    </>
   );
 };
 

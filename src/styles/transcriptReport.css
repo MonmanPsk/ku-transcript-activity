@@ -98,7 +98,6 @@
 .activity-lists {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
   color: #1D1617;
   text-align: left;
 }

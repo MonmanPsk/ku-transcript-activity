@@ -1,20 +1,26 @@
-.data-table {
-  margin-bottom: 1rem;
+.activity-data-lists {
+  margin-bottom: 10px;
 }
 
 .toggle-button {
   display: flex;
+  justify-content: center;
   align-items: center;
   cursor: pointer;
 }
 
 .arrow-icon {
-  margin-right: 0.5rem;
-  transition: transform 0.3s;
+  height: 20px;
+  color: #1D1617;
 }
 
-.arrow-icon.expanded {
-  transform: rotate(90deg);
+@keyframes popupAnim {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.popup {
+  animation: popupAnim .5s;
 }
 
 table {
