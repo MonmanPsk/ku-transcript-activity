@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+
 import Home from "./Page/Home";
 import NotFound from "./Page/NotFound";
 import ScrollToTop from "./components/ScrollToTop";

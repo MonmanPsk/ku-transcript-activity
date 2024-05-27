@@ -1,15 +1,21 @@
 import { useEffect, useState } from "react";
-import fetchUser from "../api/user";
+
+import fetchUser from "../api/user.ts";
+// import fetchUserEN from "../api/user_en.ts";
+
 import Header from "../components/Header";
 import Profile from "../components/Profile/Profile";
 import Downloader from "../components/Downloader";
 import TranscriptReport from "../components/TranscriptReport/TranscriptReport";
+
 import "../styles/App.css";
+
 import {
   ActivityProps,
   StudentProps,
 } from "../types/TranscriptReport.types";
 import { name } from "../types/Profile.types";
+
 import { getActivityAmount } from "../modules/getActivityAmount.modules";
 import { sumHoursNestedArray } from "../modules/totalHours.modules";
 
@@ -29,11 +35,12 @@ function Home() {
       });
     }
     // Add userData to dependency array to ensure useEffect runs only when userData changes
-  }, []); // useEffect will only run when userData changes
+  }, [userData]); // useEffect will only run when userData changes
 
   const profile = {
-    name: { first: userData?.firstname, last: userData?.lastname },
-    email: userData?.email,
+    profileImage: userData?.profileImage as string,
+    name: { first: userData?.firstname, last: userData?.lastname } as name,
+    email: userData?.email as string,
     passStatus: false,
     totalHours: sumHoursNestedArray(userData as StudentProps),
     totalActivity: getActivityAmount(userData as StudentProps),
@@ -45,8 +52,9 @@ function Home() {
     <>
       <Header />
       <Profile
-        name={profile.name as name}
-        email={profile.email as string}
+        profileImage={profile.profileImage}
+        name={profile.name}
+        email={profile.email}
         passStatus={profile.passStatus}
         totalHours={profile.totalHours}
         totalActivity={profile.totalActivity}

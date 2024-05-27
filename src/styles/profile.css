@@ -29,29 +29,29 @@
   width: 55px;
   height: 55px;
   display: flex;
-  position: relative;
-  align-items: flex-start;
-  flex-shrink: 1;
+  overflow: hidden;
+  border-radius: 27px;
+  justify-content: center;
+  align-items: center;
 }
 .page1-vector-bg {
-  top: 0px;
-  left: 0px;
-  width: 55px;
-  height: 55px;
+  height: 100%;
+  width: 100%;
   display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(20, 114, 113, .05);
 }
-
+.page1-profile-text {
+  width: 100%;
+  color: rgb(20, 114, 113);
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-indent: 3px;
+}
 .page1-profile-pic {
-  top: 0px;
-  left: 0px;
-  width: 55px;
-  height: 55px;
-  opacity: 0.3;
-  position: absolute;
-  border-radius: 27px;
+  width: 100%;
 }
 .page1-name {
   min-width: 120px;

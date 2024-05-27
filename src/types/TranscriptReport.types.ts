@@ -16,6 +16,7 @@ export type ActivityProps = {
 export type StudentProps = {
   id: number;
   studentId: number;
+  profileImage: string;
   prefix: string;
   firstname: string;
   lastname: string;

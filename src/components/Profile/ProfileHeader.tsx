@@ -3,6 +3,8 @@ type ProfileHeader = {
   first: string;
   last: string;
   email: string;
+  imageSrc: string;
+  profileLetter: string;
 };
 
 export default function ProfileHeader(props: ProfileHeader) {
@@ -12,11 +14,18 @@ export default function ProfileHeader(props: ProfileHeader) {
         <div className="page1-frame10205">
           <div className="page1-latest-pic">
             <div className="page1-vector-bg">
-              <img
-                src="https://tr.rbxcdn.com/ef9bb7b81b5c5046686c4bbcf9a1e189/420/420/Hat/Png"
-                alt="profile-pic"
-                className="page1-profile-pic"
-              />
+              {!props.imageSrc && <>
+                <p className="page1-profile-text">{props.profileLetter}</p>
+              </>
+              }
+              {props.imageSrc && <>
+                <img
+                  src={props.imageSrc}
+                  alt="profile-pic"
+                  className="page1-profile-pic"
+                />
+              </>
+              }
             </div>
           </div>
           <div className="page1-name">
