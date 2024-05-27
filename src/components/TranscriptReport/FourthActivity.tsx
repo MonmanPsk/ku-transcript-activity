@@ -7,37 +7,6 @@ export type FourthActivityProps = {
 };
 
 export default function FourthActivity({ activities }: FourthActivityProps) {
-  const test_arr = [
-    {
-      activityId: "166040010007",
-      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
-      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
-      position: "ผู้เข้าร่วมโครงการ",
-      hours: 8,
-    },
-    {
-      activityId: "166040010007",
-      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
-      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
-      position: "ผู้เข้าร่วมโครงการ",
-      hours: 8,
-    },
-    {
-      activityId: "166040010007",
-      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
-      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
-      position: "ผู้เข้าร่วมโครงการ",
-      hours: 8,
-    },
-    {
-      activityId: "166040010007",
-      activityName: "เฟรชชี่ เฟสทิเวิล 2023",
-      organization: "วิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน",
-      position: "ผู้เข้าร่วมโครงการ",
-      hours: 8,
-    },
-  ];
-
   const fourthTable: JSX.Element[] = [
     <div className="activity-lists">
       {activities.map((innerArray, index) => (

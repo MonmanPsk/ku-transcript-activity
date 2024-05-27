@@ -16,8 +16,9 @@ import {
 } from "../types/TranscriptReport.types";
 import { name } from "../types/Profile.types";
 
-import { getActivityAmount } from "../modules/getActivityAmount.modules";
-import { sumHoursNestedArray } from "../modules/totalHours.modules";
+import { getActivityAmount } from "../modules/getActivityAmount.modules.ts";
+import { sumHoursNestedArray } from "../modules/totalHours.modules.ts";
+import { checkStatus } from "../modules/checkStatus.modules.ts";
 
 function Home() {
   const [userData, setUserData] = useState<StudentProps | null>(null);
@@ -37,16 +38,16 @@ function Home() {
     // Add userData to dependency array to ensure useEffect runs only when userData changes
   }, [userData]); // useEffect will only run when userData changes
 
+  const activitiesData: ActivityProps[][] = userData?.activities ?? [];
+
   const profile = {
     profileImage: userData?.profileImage as string,
     name: { first: userData?.firstname, last: userData?.lastname } as name,
     email: userData?.email as string,
-    passStatus: false,
+    passStatus: checkStatus(activitiesData),
     totalHours: sumHoursNestedArray(userData as StudentProps),
     totalActivity: getActivityAmount(userData as StudentProps),
   };
-
-  const activitiesData: ActivityProps[][] = userData?.activities ?? [];
 
   return (
     <>
