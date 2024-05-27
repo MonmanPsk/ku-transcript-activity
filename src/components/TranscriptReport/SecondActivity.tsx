@@ -14,6 +14,7 @@ export default function SecondActivity({ activities }: SecondActivityProps) {
   ).reduce((prev, curr) => {
     return (prev as number) + (curr as number[]).reduce((a, b) => a + b, 0);
   }, 0);
+  const activityProgress = (100 * totalActivityAmount) / 4
 
   const firstSub = activities.filter((activity) => {
     if ((activity.hours as number[])[0] > 0) return activity;
@@ -109,12 +110,11 @@ export default function SecondActivity({ activities }: SecondActivityProps) {
         </div>
       </div>
       <div className="activity-progress">
-        <p>4/4</p>
+        <p>{totalActivityAmount}/4</p>
         <div className="activity-progress-bottombar">
-          <div
-            className="activity-progress-frontbar"
-            style={{ width: `${(100 * totalActivityAmount) / 4}%` }}
-          ></div>
+          <div className="activity-progress-bar" style={{ width: `${activityProgress > 100 ? 100 : activityProgress}%` }}>
+            <div className="activity-progress-frontbar"></div>
+          </div>
         </div>
       </div>
       <div className="activity-lists">

@@ -12,6 +12,7 @@ export default function ThirdActivity({ activities }: ThirdActivityProps) {
     activities,
     (activity) => activity.hours
   ).reduce((prev, curr) => (prev as number) + (curr as number), 0);
+  const activityProgress = (100 * totalActivityAmount) / 1
 
   const thirdTable: JSX.Element[] = activities.map((activity, index) => (
     <div className="activity" key={index}>
@@ -37,10 +38,9 @@ export default function ThirdActivity({ activities }: ThirdActivityProps) {
       <div className="activity-progress">
         <p>{totalActivityAmount}/1</p>
         <div className="activity-progress-bottombar">
-          <div
-            className="activity-progress-frontbar"
-            style={{ width: `${(100 * totalActivityAmount) / 1}%` }}
-          ></div>
+          <div className="activity-progress-bar" style={{ width: `${activityProgress > 100 ? 100 : activityProgress}%` }}>
+            <div className="activity-progress-frontbar"></div>
+          </div>
         </div>
       </div>
       <div className="activity-lists">

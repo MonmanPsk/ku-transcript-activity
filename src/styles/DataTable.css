@@ -14,13 +14,13 @@
   color: #1D1617;
 }
 
-@keyframes popupAnim {
+@keyframes showupAnim {
   from {opacity: 0;}
   to {opacity: 1;}
 }
 
-.popup {
-  animation: popupAnim .5s;
+.showup {
+  animation: showupAnim .5s;
 }
 
 table {

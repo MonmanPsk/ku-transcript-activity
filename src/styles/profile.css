@@ -12,6 +12,13 @@
   width: 85%;
   margin-bottom: 25px;
 }
+@keyframes showupAnim {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.page1-profile-section > * {
+  animation: showupAnim .5s;
+}
 .page1-frame10204 {
   /* gap: 50px; */
   display: flex;

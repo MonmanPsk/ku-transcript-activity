@@ -17,6 +17,15 @@
   margin-bottom: 30px;
 }
 
+@keyframes showupAnim {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.downloader-container > * {
+  animation: showupAnim .5s;
+}
+
 .downloader-title {
   margin-left: 10px;
   color: #1d1617;
