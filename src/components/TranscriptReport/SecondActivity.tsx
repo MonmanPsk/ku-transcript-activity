@@ -32,8 +32,8 @@ export default function SecondActivity({ activities }: SecondActivityProps) {
     if ((activity.hours as number[])[3] > 0) return activity;
   });
 
-  const secondTable: JSX.Element[][] = [
-    [
+  const secondTable: JSX.Element[] = [
+    (
       <>
         {!firstSub.length && <>-</>}
         {firstSub.length > 0 && (
@@ -46,9 +46,9 @@ export default function SecondActivity({ activities }: SecondActivityProps) {
             ))}
           </>
         )}
-      </>,
-    ],
-    [
+      </>
+    ),
+    (
       <>
         {!secondSub.length && <>-</>}
         {secondSub.length > 0 && (
@@ -61,9 +61,9 @@ export default function SecondActivity({ activities }: SecondActivityProps) {
             ))}
           </>
         )}
-      </>,
-    ],
-    [
+      </>
+    ),
+    (
       <>
         {!thirdSub.length && <>-</>}
         {thirdSub.length > 0 && (
@@ -76,9 +76,9 @@ export default function SecondActivity({ activities }: SecondActivityProps) {
             ))}
           </>
         )}
-      </>,
-    ],
-    [
+      </>
+    ),
+    (
       <>
         {!fourthSub.length && <>-</>}
         {fourthSub.length > 0 && (
@@ -91,8 +91,8 @@ export default function SecondActivity({ activities }: SecondActivityProps) {
             ))}
           </>
         )}
-      </>,
-    ],
+      </>
+    ),
   ];
 
   return (

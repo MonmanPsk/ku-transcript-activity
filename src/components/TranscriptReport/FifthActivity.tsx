@@ -7,7 +7,7 @@ export type FifthActivityProps = {
 };
 
 export default function FifthActivity({ activities }: FifthActivityProps) {
-  const fifthTable: JSX.Element[] = [
+  const fifthTable: JSX.Element = (
     <div className="activity-lists">
       {activities.map((innerArray, index) => (
         <div className="inner-activity-list" key={index}>
@@ -19,8 +19,8 @@ export default function FifthActivity({ activities }: FifthActivityProps) {
           ))}
         </div>
       ))}
-    </div>,
-  ];
+    </div>
+  );
 
   if (!Array.isArray(activities)) {
     console.error("Activities is not an array:", activities);
