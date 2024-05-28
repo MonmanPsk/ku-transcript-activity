@@ -29,12 +29,17 @@ const FourthActivityPage = () => {
                   activities.map((innerArray, index) => (
                     <div key={index} className="inner-activity-list">
                       {innerArray.map((activity, innerIndex) => (
-                        <div className="activity-page-activity" key={innerIndex}>
+                        <div
+                          className="activity-page-activity"
+                          key={innerIndex}
+                        >
                           <p className="activity-page-activity-id">
                             {activity.activityId ? activity.activityId : "-"}
                           </p>
                           <p className="activity-page-activity-organization">
-                            {activity.organization ? activity.organization : "-"}
+                            {activity.organization
+                              ? activity.organization
+                              : "-"}
                           </p>
                           <p className="activity-page-activity-position">
                             {activity.position ? activity.position : "-"}
