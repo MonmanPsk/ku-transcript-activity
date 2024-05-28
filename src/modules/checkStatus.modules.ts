@@ -9,9 +9,20 @@ export function checkStatus(activities: ActivityProps[][]) {
     const secondActivity: ActivityProps[] = activities[1];
     const thirdActivity: ActivityProps[] = activities[2];
 
-    const firstActivityStatus: boolean = (firstActivity.length >= 3) ? true : false;
-    const secondActivityStatus: boolean = (secondActivity.length >= 4) ? true : false;
-    const thirdActivityStatus: boolean = (thirdActivity.length >= 1) ? true : false;
+    const firstActivityStatus: boolean = (firstActivity.length >= 3);
+    const secondOneActivityStatus: boolean = (secondActivity.filter((activity) => {
+        if ((activity.hours as number[])[0] > 0) return activity;
+    }).length >= 1);
+    const secondTwoActivityStatus: boolean = (secondActivity.filter((activity) => {
+        if ((activity.hours as number[])[1] > 0) return activity;
+    }).length >= 1);
+    const secondThreeActivityStatus: boolean = (secondActivity.filter((activity) => {
+        if ((activity.hours as number[])[2] > 0) return activity;
+    }).length >= 1);
+    const secondFourActivityStatus: boolean = (secondActivity.filter((activity) => {
+        if ((activity.hours as number[])[3] > 0) return activity;
+    }).length >= 1);
+    const thirdActivityStatus: boolean = (thirdActivity.length >= 1);    
 
-    return firstActivityStatus && secondActivityStatus && thirdActivityStatus;
+    return firstActivityStatus && (secondOneActivityStatus && secondTwoActivityStatus && secondThreeActivityStatus && secondFourActivityStatus) && thirdActivityStatus;
 }
