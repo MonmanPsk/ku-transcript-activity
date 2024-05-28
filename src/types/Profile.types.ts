@@ -4,10 +4,10 @@ export type name = {
 };
 
 export type ProfileProps = {
+  profileImage: string;
   name: name;
   email: string;
   passStatus: boolean; //pass criteria or not
   totalHours: number;
   totalActivity: number;
-  // img : string
 };

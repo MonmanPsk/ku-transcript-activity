@@ -14,7 +14,16 @@
   border-radius: 22px;
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+}
+
+@keyframes showupAnim {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.downloader-container > * {
+  animation: showupAnim .5s;
 }
 
 .downloader-title {
@@ -36,6 +45,7 @@
   height: 50px;
   width: 40%;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .downloader-icon {

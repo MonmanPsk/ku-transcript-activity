@@ -9,6 +9,7 @@ export type FirstActivityProps = {
 export default function FirstActivity({ activities }: FirstActivityProps) {
   const totalActivityAmount = activities.length;
   const totalHours = Array.from(activities, (activity) => activity.hours).reduce((prev, curr) => (prev as number) + (curr as number), 0);
+  const activityProgress = (100 * totalActivityAmount) / 3
 
   const firstTable: JSX.Element[] = activities.map((activity, index) => (
     <div className="activity" key={index}>
@@ -34,11 +35,13 @@ export default function FirstActivity({ activities }: FirstActivityProps) {
       <div className="activity-progress">
         <p>{totalActivityAmount}/3</p>
         <div className="activity-progress-bottombar">
-          <div className="activity-progress-frontbar" style={{ width: `${100 * totalActivityAmount / 3}%` }}></div>
+          <div className="activity-progress-bar" style={{ width: `${activityProgress > 100 ? 100 : activityProgress}%` }}>
+            <div className="activity-progress-frontbar"></div>
+          </div>
         </div>
       </div>
       <div className="activity-lists">
-        <DataTable child={firstTable}/>
+        <DataTable child={firstTable} />
       </div>
       <ButtonAll path="/first-activity" data={[]} />
     </div>

@@ -6,13 +6,12 @@ import FifthActivity from "./FifthActivity";
 import { ActivityProps } from "../../types/TranscriptReport.types";
 
 import "../../styles/transcriptReport.css";
+
 interface TranscriptReportProps {
   activities: ActivityProps[][];
 }
 
-export default function TranscriptReport({
-  activities,
-}: TranscriptReportProps) {
+export default function TranscriptReport({ activities }: TranscriptReportProps) {
   if (!activities || activities.length === 0) {
     // Check whether activities is undefined or not
     return (
