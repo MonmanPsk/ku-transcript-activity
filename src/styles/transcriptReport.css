@@ -181,13 +181,6 @@
   cursor: pointer;
 }
 
-.back-button-container {
-  margin-top: 60px;
-  display: flex;
-  width: 95%;
-  justify-content: start;
-}
-
 .back-button {
   width: 32px;
   height: 32px;
@@ -200,94 +193,4 @@
 .back-button img {
   padding-top: 3px;
   width: 15px;
-}
-
-.activity-page-header {
-  width: 95%;
-}
-
-.activiity-page-header-text {
-  font-weight: 550;
-  font-size: 20px;
-  font-family: DB Ozone X;
-  color: rgba(29, 22, 23, 1);
-  display: flex;
-  margin: 10px 5px;
-}
-
-.activity-page-table-headbar {
-  background-color: rgba(166, 207, 255, 1);
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  font-size: 14px;
-  font-family: DB Ozone X;
-  color: black;
-  padding: 15px 20px;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  border: rgba(220, 223, 228, 1) solid 1px;
-  border-bottom: none;
-  text-align: start;
-}
-
-.first-column-header {
-  width: 55px;
-  height: 34px;
-}
-
-.second-column-header {
-  width: 100px;
-}
-
-.third-column-header {
-  width: 80px;
-}
-
-.fourth-column-header {
-  width: 50px;
-}
-
-.activity-page-table-content {
-  padding: 15px 20px;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  border: rgba(220, 223, 228, 1) solid 1px;
-  border-top: none;
-}
-
-.activity-table-list {
-  list-style-type: none;
-}
-
-.activity-page-activity {
-  font-size: 14px;
-  font-family: DB Ozone X;
-  display: flex;
-  justify-content: space-between;
-  text-align: start;
-  margin-bottom: 10px;
-}
-
-.activity-page-activity-id {
-  width: 55px;
-  height: 34px;
-  word-wrap: break-word;
-}
-
-.activity-page-activity-organization {
-  width: 100px;
-  height: 34px;
-}
-
-.activity-page-activity-position {
-  width: 80px;
-}
-
-.activity-page-activity-hours {
-  width: 50px;
-}
-
-.no-data-text {
-  text-align: start;
 }
