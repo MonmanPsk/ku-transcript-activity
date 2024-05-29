@@ -43,7 +43,7 @@ export default function FirstActivity({ activities }: FirstActivityProps) {
       <div className="activity-lists">
         <DataTable child={firstTable} />
       </div>
-      <ButtonAll path="/first-activity" data={[]} />
+      <ButtonAll path="/first-activity" data={activities} />
     </div>
   );
 }

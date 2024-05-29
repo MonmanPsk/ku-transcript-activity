@@ -164,7 +164,7 @@ export default function SecondActivity({ activities }: SecondActivityProps) {
           </div>
         </div>
       </div>
-      <ButtonAll path="/second-activity" data={[]} />
+      <ButtonAll path="/second-activity" data={activities} />
     </div>
   );
 }

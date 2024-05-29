@@ -46,7 +46,7 @@ export default function ThirdActivity({ activities }: ThirdActivityProps) {
       <div className="activity-lists">
         <DataTable child={thirdTable} />
       </div>
-      <ButtonAll path="/third-activity" data={[]} />
+      <ButtonAll path="/third-activity" data={activities} />
     </div>
   );
 }

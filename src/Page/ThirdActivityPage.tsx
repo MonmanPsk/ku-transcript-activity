@@ -4,7 +4,6 @@ import { ActivityProps } from "../types/TranscriptReport.types";
 
 function ThirdActivityPage() {
     const location = useLocation();
-    const checkData = false;
 
     return (
         <>
@@ -13,7 +12,7 @@ function ThirdActivityPage() {
             </div>
             <div className="activity-page-header">
                 <div className="activiity-page-header-text">
-                    ได้รับคัดเลือกให้เป็นนิิสิตดีเด่นตามประกาศของมหาวิทยาลัย
+                    กิจกรรมเพื่อสังคม (ไม่น้อยกว่า 1 กิจกรรม)
                 </div>
                 <div>
                     <div className="activity-page-table-headbar">
@@ -25,7 +24,7 @@ function ThirdActivityPage() {
                     <div className="activity-page-table-content">
                         <ul>
                             <li className="activity-table-list">
-                                {checkData ? (
+                                {location.state.length > 0 ? (
                                     location.state.map(
                                         (activity: ActivityProps, index: number) => (
                                             <div className="activity-page-activity" key={index}>
