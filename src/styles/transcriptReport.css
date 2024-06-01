@@ -22,21 +22,24 @@
   flex-direction: column;
   width: 100%;
   padding: 10px;
-  background: linear-gradient(
-    280.04deg,
-    rgba(146, 163, 253, 0.2) -4.74%,
-    rgba(157, 206, 255, 0.2) 164.93%
-  );
+  background: linear-gradient(280.04deg,
+      rgba(146, 163, 253, 0.2) -4.74%,
+      rgba(157, 206, 255, 0.2) 164.93%);
   border-radius: 20px;
   margin-bottom: 15px;
 }
 
 @keyframes showupAnim {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
-.activity-container > * {
+.activity-container>* {
   margin: 0 8px;
   animation: showupAnim .5s;
 }
@@ -100,8 +103,13 @@
 }
 
 @keyframes progressBarAnim {
-  from {width: 0%;}
-  to {width: 100%;}
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
 .activity-progress-frontbar {
@@ -179,18 +187,4 @@
   appearance: none;
   font-weight: 500;
   cursor: pointer;
-}
-
-.back-button {
-  width: 32px;
-  height: 32px;
-  border: none;
-  border-radius: 8px;
-  background-color: rgba(220, 223, 228, 1);
-  cursor: pointer;
-}
-
-.back-button img {
-  padding-top: 3px;
-  width: 15px;
 }
