@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./Page/Home";
@@ -22,6 +22,13 @@ const LazyFifthActivityPage = React.lazy(
 );
 
 function App() {
+  useEffect(() => {
+    // Clear localStorage when Unmount
+    return () => {
+      window.localStorage.clear()
+    }
+  }, [])
+
   return (
     <>
       <ScrollToTop />

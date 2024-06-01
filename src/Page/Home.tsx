@@ -24,19 +24,24 @@ function Home() {
   const [userData, setUserData] = useState<StudentProps | null>(null);
 
   useEffect(() => {
-    // Fetch data only if userData is null (not fetched before)
-    if (userData === null) {
+    // Fetch data only first time entering (if 'userData' in localStorage is null)
+    if (window.localStorage.getItem("userData") === null) {
       fetchUser().then((data) => {
         if (data) {
           setUserData(data);
+          window.localStorage.setItem("userData", JSON.stringify(data));
         } else {
           // Handle case where fetchUser() returns undefined
           console.error("fetchUser() returned undefined");
         }
       });
     }
-    // Add userData to dependency array to ensure useEffect runs only when userData changes
-  }, [userData]); // useEffect will only run when userData changes
+    else {
+      // if 'userData' in localStorage is not null will get data from localStorage
+      const data = window.localStorage.getItem("userData");
+      setUserData(JSON.parse(data as string));
+    }
+  }, []) // useEffect will only run once at first
 
   const activitiesData: ActivityProps[][] = userData?.activities ?? [];
 

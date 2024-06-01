@@ -9,19 +9,24 @@ import Status from "./Status";
 import fetchUserEN from "../../api/user_en.ts";
 
 export default function Profile({ profileImage, name, email, passStatus, totalHours, totalActivity }: ProfileProps) {
-  const [profileLetter, setprofileLetter] = useState<string>("");
+  const [profileLetter, setProfileLetter] = useState<string>("");
 
   useEffect(() => {
-    if (profileLetter === "") {
+    if (window.localStorage.getItem("profileLetter") === null) {
       fetchUserEN().then((data) => {
         if (data) {
-          setprofileLetter(data.firstname[0] + data.lastname[0]);
+          setProfileLetter(data.firstname[0] + data.lastname[0]);
+          window.localStorage.setItem("profileLetter", data.firstname[0] + data.lastname[0]);
         } else {
           console.error("fetchUser() returned undefined");
         }
       });
     }
-  }, [profileLetter]);
+    else {
+      const letter = window.localStorage.getItem("profileLetter");
+      setProfileLetter(letter as string);
+    }
+  }, []);
 
   return (
     // return profile component
