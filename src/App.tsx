@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
-
-import fetchUser from "./api/user.ts";
-import fetchUserEN from "./api/user_en.ts";
+import { useUserData, useProfileLetter } from "./hooks/useData.ts";
 
 import Home from "./Page/Home";
 import NotFound from "./Page/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
-
-import { StudentProps } from "./types/TranscriptReport.types";
 
 const LazyFirstActivityPage = React.lazy(
   () => import("./Page/FirstActivityPage")
@@ -27,36 +23,14 @@ const LazyFifthActivityPage = React.lazy(
 );
 
 function App() {
-  const [userData, setUserData] = useState<StudentProps | null>(null);
-  const [profileLetter, setProfileLetter] = useState<string>("");
-
-  useEffect(() => {
-    // Clear localStorage from before version
-    window.localStorage.clear()
-    // Fetch TH user data from api
-    fetchUser().then((data) => {
-      if (data) {
-        setUserData(data);
-      } else {
-        // Handle case where fetchUser() returns undefined
-        console.error("fetchUser() returned undefined");
-      }
-    });
-    // Fetch EN user data from api
-    fetchUserEN().then((data) => {
-      if (data) {
-        setProfileLetter(data.firstname[0] + data.lastname[0]);
-      } else {
-        console.error("fetchUserEN() returned undefined");
-      }
-    });
-  }, []) // useEffect will only run once at first
+  const userData = useUserData();
+  const profileLetter = useProfileLetter();
 
   return (
     <>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home data={userData as StudentProps} profileLetter={profileLetter as string} />} />
+        <Route path="/" element={<Home data={userData} profileLetter={profileLetter as string} />} />
         <Route
           path="first-activity"
           element={
