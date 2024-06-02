@@ -5,6 +5,7 @@ export type name = {
 
 export type ProfileProps = {
   profileImage: string;
+  profileLetter: string;
   name: name;
   email: string;
   passStatus: boolean; //pass criteria or not
